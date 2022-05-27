@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/king-open/pineappleUI/issues"
   },
-  "homepage": "https://github.com/king-open/pineappleUI#readme"
+  "homepage": "https://github.com/king-open/pineappleUI#readme",
+  "dependencies": {
+    "vue": "^3.2.36"
+  }
 }
