@@ -21,6 +21,6 @@
   },
   "homepage": "https://github.com/king-open/pineappleUI#readme",
   "dependencies": {
-    "vue": "^3.2.36"
+    "vue": "^2.5.16"
   }
 }
