@@ -1,7 +1,7 @@
 <template>
   <!-- 单文件组件 -->
   <button class="j-button" :class="{ [`icon-${iconPosition}`]: true }">
-    <j-icon class="icon" v-if="icon" :name="icon"></j-icon>
+    <j-icon class="icon" v-if="icon" :name="icon"/>
     <div class="content">
       <slot />
     </div>
