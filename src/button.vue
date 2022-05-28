@@ -1,7 +1,8 @@
 <template>
   <!-- 单文件组件 -->
   <button class="j-button" :class="{ [`icon-${iconPosition}`]: true }">
-    <j-icon class="icon" v-if="icon" :name="icon"/>
+    <j-icon class="icon" v-if="icon" :name="icon"></j-icon>
+    <j-icon class="loading" name="loading"></j-icon>
     <div class="content">
       <slot />
     </div>
@@ -23,7 +24,11 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
 .j-button {
   font-size: var(--font-size);
   height: var(--button-height);
@@ -67,5 +72,8 @@ export default {
       margin-left: .1em;
     }
   }
+  .loading{
+      animation: spin 2s infinite linear;
+    }
 }
 </style>
