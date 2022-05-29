@@ -1,8 +1,9 @@
 <template>
   <!-- 单文件组件 -->
-  <button class="j-button" :class="{ [`icon-${iconPosition}`]: true }">
-    <j-icon class="icon" v-if="icon" :name="icon"></j-icon>
-    <j-icon class="loading" name="loading"></j-icon>
+  <button class="j-button" :class="{ [`icon-${iconPosition}`]: true }"
+  @click="$emit('click')">
+    <j-icon class="icon" v-if="icon && !loading" :name="icon"></j-icon>
+    <j-icon class="loading icon" v-if="loading" name="loading"></j-icon>
     <div class="content">
       <slot />
     </div>
@@ -13,6 +14,10 @@
 export default {
   props: {
     icon: {},
+    loading:{
+      type:Boolean,
+      default:false
+    },
     iconPosition: {
       type: String,
       default: 'left',
