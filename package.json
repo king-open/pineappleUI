@@ -6,7 +6,8 @@
   "scripts": {
     "dev-test": "parcel watch test/* & karma start",
     "test": "npx parcel build test/*  --no-minify && karma start --single-run ",
-    "clean": "rm -rf .cache; rm -rf dist/*"
+    "clean": "rm -rf .cache; rm -rf dist/*",
+    "start":"npm parcel index.html --no-cache"
   },
   "repository": {
     "type": "git",
