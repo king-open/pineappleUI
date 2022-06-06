@@ -32,12 +32,7 @@
 <body>
   <div id="app">
    <div class="box">
-    <j-input value="张三" disabled></j-input>
-    <j-input value="李四" readonly></j-input>
-    <j-input value="王五"></j-input>
-   </div>
-   <div class="box">
-    <j-input value="王" error="姓名不能少于两个字"></j-input>
+    <j-input value="王" @change="inputChange"></j-input>
   </div>
   <div class="box">
     <j-button :loading="loading1" @click="loading1 = !loading1">
