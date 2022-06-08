@@ -1,5 +1,5 @@
 <template>
-<div class="col" :class="colClass" :style="colStyle">
+<div class="col" :class="colClass">
  <slot></slot>
   </div>
 </template>
@@ -35,7 +35,6 @@
 <style lang="scss">
 @use "sass:math";
   .col {
-    width: 50%;
     $class-prefix: col-;
     @for $n from 1 through 24 {
       &.#{$class-prefix}#{$n} {
