@@ -3,4 +3,4 @@ dist/
 .cache/
 .idea/
 .vscode/
-
+.parcel-cache/
